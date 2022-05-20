@@ -3,28 +3,28 @@ const Carga = require('../models/Carga');
 
 const getEventos = async( req, res = response ) => {
 
-    const eventos = await Carga.find()
+    const cargas = await Carga.find()
                                 .populate('user','name');
 
     res.json({
         ok: true,
-        eventos
+        cargas
     });
 }
 
 const crearEvento = async ( req, res = response ) => {
 
-    const evento = new Carga( req.body );
+    const carga = new Carga( req.body );
 
     try {
 
-        evento.user = req.uid;
+        carga.user = req.uid;
         
-        const eventoGuardado = await evento.save();
+        const cargaGuardada = await evento.save();
 
         res.json({
             ok: true,
-            evento: eventoGuardado
+            carga: cargaGuardada
         })
 
 

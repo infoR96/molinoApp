@@ -24,7 +24,7 @@ const CargaSchema = Schema({
     tara:{
         type:Number
     },
-    pesoNeto:{
+    tonelaje:{
         type:Number
     },
     mineral:{
@@ -46,7 +46,7 @@ const CargaSchema = Schema({
 
 });
 
-EventoSchema.method('toJSON', function() {
+    CargaSchema.method('toJSON', function() {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;
     return object;
