@@ -20,7 +20,7 @@ const crearEvento = async ( req, res = response ) => {
 
         carga.user = req.uid;
         
-        const cargaGuardada = await evento.save();
+        const cargaGuardada = await carga.save();
 
         res.json({
             ok: true,
