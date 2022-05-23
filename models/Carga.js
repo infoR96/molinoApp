@@ -13,7 +13,10 @@ const CargaSchema = Schema({
     },
     celular:{
         type:String,
-        requerid:true
+        required:true
+    },
+    acopiador:{
+        type:String
     },
     ticket:{
         type:String,
@@ -25,7 +28,8 @@ const CargaSchema = Schema({
         type:Number
     },
     tonelaje:{
-        type:Number
+        type:Number,
+        required:true
     },
     mineral:{
         type:String
